@@ -259,7 +259,7 @@ export default function CanvasPage() {
 
       const newShape: CanvasShape = {
         id: crypto.randomUUID(),
-        type: currentTool as CanvasShape['type'],
+        type: currentTool as 'rectangle' | 'triangle' | 'ellipse' | 'line',
         x: shapeX,
         y: shapeY,
         width,
