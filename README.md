@@ -8,6 +8,8 @@ This is a simple Next.js application that demonstrates how to use the `canvas` t
 
 In this version, I started with a new Next.js application and creating a canvas. Creating some states and functions to handle the drawing. I also added a button to download the canvas as an PNG image. The first version was quickly created and I didn't spend much time on the design.
 
+![Screenshot 2025-04-15 at 14 46 18](https://github.com/user-attachments/assets/99634a0f-092f-4f9d-985b-cb14b4204bd2)
+
 What I learned from this project:
 
 Its all nice until someone wants to undo/redo 😂
