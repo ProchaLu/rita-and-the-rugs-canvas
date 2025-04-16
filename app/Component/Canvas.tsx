@@ -138,8 +138,11 @@ export default function CanvasPage() {
       ctx.strokeStyle = drawColor;
       ctx.beginPath();
       currentFreeDrawPoints.forEach((point, index) => {
-        if (index === 0) ctx.moveTo(point.x, point.y);
-        else ctx.lineTo(point.x, point.y);
+        if (index === 0) {
+          ctx.moveTo(point.x, point.y);
+        } else {
+          ctx.lineTo(point.x, point.y);
+        }
       });
       ctx.stroke();
     }
