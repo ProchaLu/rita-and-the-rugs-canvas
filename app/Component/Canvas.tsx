@@ -62,9 +62,16 @@ export default function CanvasPage() {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    if (!canvas) return;
+
+    if (!canvas) {
+      return;
+    }
+
     const ctx = canvas.getContext('2d');
-    if (!ctx) return;
+
+    if (!ctx) {
+      return;
+    }
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.fillStyle = backgroundColor;
@@ -200,7 +207,9 @@ export default function CanvasPage() {
 
   const handleMouseDown = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
-    if (!rect) return;
+    if (!rect) {
+      return;
+    }
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
 
@@ -213,7 +222,11 @@ export default function CanvasPage() {
 
   const handleMouseMove = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
-    if (!rect) return;
+
+    if (!rect) {
+      return;
+    }
+
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     setMousePos({ x, y });
@@ -225,7 +238,11 @@ export default function CanvasPage() {
 
   const handleMouseUp = (e: React.MouseEvent<HTMLCanvasElement>) => {
     const rect = canvasRef.current?.getBoundingClientRect();
-    if (!rect) return;
+
+    if (!rect) {
+      return;
+    }
+
     const clientX = e.clientX - rect.left;
     const clientY = e.clientY - rect.top;
 
